@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis e Tipos Primitivos</title>
+</head>
+<body>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis</title>
+    <style>
+        body {
+            background-color: rgb(160, 160, 231);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(225, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Aprendendo Java Script!!</p>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?').toLocaleUpperCase()
+        var n1 = Number.parseInt(window.prompt('Digite o 1º número: '))
+        var n2 = Number.parseInt(window.prompt('Digite o 2º número: '))
+        var soma =  n1 + n2
+
+        document.writeln(`<strong>${nome}</strong>, seu nome tem ${nome.length} letras<br>`)
+        document.writeln(`O resultado da soma é: ${soma}`)
+
+        window.alert(`É um grande prazer em te conhecer ${nome}`)
+        window.alert(`A soma entre ${n1} e ${n2} é ${soma}`)
+    </script>
+</body>
+</html>
