@@ -30,12 +30,15 @@
     <p>Aprendendo Java Script!!</p>
     <script>
         var nome = window.prompt('Qual é o seu nome?').toLocaleUpperCase()
-        var n1 = Number.parseInt(window.prompt('Digite o 1º número: '))
-        var n2 = Number.parseInt(window.prompt('Digite o 2º número: '))
+        var sal  = Number.parseFloat(window.prompt('Informe o seu salário'))
+        var n1   = Number.parseInt(window.prompt('Digite o 1º número'))
+        var n2   = Number.parseInt(window.prompt('Digite o 2º número'))
         var soma =  n1 + n2
 
         document.writeln(`<strong>${nome}</strong>, seu nome tem ${nome.length} letras<br>`)
-        document.writeln(`O resultado da soma é: ${soma}`)
+        document.writeln(`O resultado da soma é: ${soma}<br>`)
+        document.writeln(`Seu salário é: ${sal.toFixed(2)}<br>`)
+        document.writeln(`Seu salário formatado é: ${sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
 
         window.alert(`É um grande prazer em te conhecer ${nome}`)
         window.alert(`A soma entre ${n1} e ${n2} é ${soma}`)
