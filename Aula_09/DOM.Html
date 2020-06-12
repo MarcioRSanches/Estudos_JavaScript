@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+        body {
+            background: rgb(144, 144, 241);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id='msg'>Clique em mim</div>
+    <script>
+        window.document.writeln(window.document.charset) 
+        window.document.writeln(window.navigator.appName)
+        window.document.writeln(window.document.URL)
+        // pega o objeto pela marca (tag)
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.writeln(p1.innerText)
+        window.document.writeln(p1.innerHTML)
+        // pega o objeto pelo ID
+        var d = window.document.getElementById('msg')
+        d.style.background = 'black'
+        d.innerText = 'Estou alterando o conteúdo do texto'
+
+        // pega o obejto pelo Name
+        //var d = window.document.getElementsByName('msg')[0]
+
+        // pega o objeto pela class
+        //var d = window.document.getElementsByClassName('msg')[0]
+
+        // pega o objeto pelo selector
+        // quando o elemento está identificado pelo ID o selector usa(#), quando é classe usa o (.)
+        var d = window.document.querySelector('div#msg')
+    </script>
+</body>
+</html>
