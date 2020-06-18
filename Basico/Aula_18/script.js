@@ -1,6 +1,15 @@
+var num = document.getElementById('txtn')
+var tab = document.getElementById('seltab')
+
+function limpar() {
+    num.value = ''
+    tab.innerHTML = ''
+    let item = document.createElement('option')
+    item.text = `Digite um número acima`
+    tab.appendChild(item)
+}
+
 function tabuada() {
-    let num = document.getElementById('txtn')
-    let tab = document.getElementById('seltab')
     if (num.value.length == 0) {
         window.alert('Por favor digite um número!')
     } else {
