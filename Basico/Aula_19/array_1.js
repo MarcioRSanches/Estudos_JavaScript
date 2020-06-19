@@ -11,6 +11,10 @@ for(let pos in num) {
     console.log(`For simplificado - A posição ${pos} tem o valor ${num[pos]}`)
 }
 
+num.forEach(function(value, key) {
+    console.log(`ForEach | O valor ${value} está na posição ${key}`)
+})
+
 // pesquisar conteúdo do array
 
 console.log(`Retornar a chave do valor 7 é ${num.indexOf(7)}`)
