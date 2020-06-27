@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<big>Consumo de Km e Custo</big>
+<h1>Álcool ou Gasolina<h1>
+<script>
+	var pulaLinha = function() {
+		document.write('<br>')
+	}
+	
+	var mostra = function(msg) {
+		document.write('<big>'+msg+'</big>')
+		pulaLinha()
+		criaTraco()
+	}
+	
+	var criaTraco = function() {
+		document.write('<hr>')
+	}
+
+	var tanque = 40
+	var precoDaGasolina      = 2.90
+	var precoDoAlcool	     = 2.40
+	var caminhoComGasolina   = 480
+	var caminhoComAlcool     = 300
+	var consumoDeGasolina    = Math.round(caminhoComGasolina/tanque).toFixed(2)
+	var consumoDeAlcool      = Math.round(caminhoComAlcool/tanque).toFixed(2)
+	var precoPorKilometroGas = (consumoDeGasolina/precoDaGasolina).toFixed(2)
+	var precoPorKimolotroAlc = (consumoDeAlcool/precoDoAlcool).toFixed(2)
+	criaTraco()
+	mostra('O consumo de Km por litro de gasolina com o tanque cheio é: '+(consumoDeGasolina)+ ' Km/l')
+	mostra('O consumo de Km por litro de álcool com o tanque cheio é: '+(consumoDeAlcool)+ ' Km/l')
+	mostra('O preço da gasolina por kilometro é de: '+(precoPorKilometroGas))
+	mostra('O preço do álcool por kilometro é de: '+(precoPorKimolotroAlc))
+	console.log('Esta mensagem aparecer apenas no console')
+</script>

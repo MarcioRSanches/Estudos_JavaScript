@@ -1,0 +1,26 @@
+<meta charset = "UTF-8">
+<h1>Calcule seu IMC</h1>
+<script>
+	var pulaLinha = function() {
+		document.write('<br>')
+	}
+	
+	var mostra = function(msg) {
+		document.write('<big>'+msg+'</big>')
+		pulaLinha()
+		criaTraco()
+	}
+	
+	var criaTraco = function() {
+		document.write('<hr>')
+	}
+	
+	var calculaIMC = function(altura, peso) {
+		var imc = (peso / (altura * altura)).toFixed(2)
+		mostra("IMC calculado é " + imc)
+	}
+	
+
+	calculaIMC(1.72,83)
+	
+</script>
