@@ -17,10 +17,20 @@
 	
 	var calculaIMC = function(altura, peso) {
 		var imc = (peso / (altura * altura)).toFixed(2)
-		mostra("IMC calculado é " + imc)
+		return imc
 	}
 	
-
-	calculaIMC(1.72,83)
+	var nome   = prompt('Informe o seu nome')
+	var peso   = prompt('Peso')
+	var altura = prompt('Altura')
+	
+	var imc = calculaIMC(altura,peso).toFixed(2)
+	
+	mostra(nome+',o seu IMC é: '+imc)
+	
+	if (imc> 18.5) {
+		mostra('Está acima do peso')
+	} else {
+		mostra('Está abaixo do peso')
 	
 </script>
