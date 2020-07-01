@@ -20,17 +20,41 @@
 		return imc
 	}
 	
-	var nome   = prompt('Informe o seu nome')
-	var peso   = prompt('Peso')
-	var altura = prompt('Altura')
+	var calculaIdade = function(ano) {
+		var dataAtual = new Date()
+		var anoAtual = dataAtual.getFullYear()
+		var idade = anoAtual - ano
+		return idade
+	}
 	
-	var imc = calculaIMC(altura,peso).toFixed(2)
+	var calculaDiasVida = function(ano) {
+		var diasVida = ano * 365
+		return diasVida
+	}
 	
-	mostra(nome+',o seu IMC é: '+imc)
+	var calculaBatimentos = function(dias) {
+		var batimentos = diasVida * 24 * 60 * 80
+		return batimentos
+	}
+		
+	var nome    = prompt('Informe o seu nome')
+	var peso    = prompt('Peso')
+	var altura  = prompt('Altura')
+	var anoNasc = prompt('Qual ano nasceu?')
 	
-	if (imc> 18.5) {
+	var idade = calculaIdade(anoNasc)
+	var diasVida = calculaDiasVida(anoNasc)
+	var batimentos = calculaBatimentos(diasVida)
+	var imc = calculaIMC(altura,peso)
+	
+	mostra(nome+', o seu IMC é: '+imc)
+	mostra('Idade: '+idade+' anos e já viveu: '+diasVida+ ' dias')
+	mostra('Durante estes dias de vida seu coração bateu '+batimentos+ ' vezes')
+	
+	if (imc > 18.5) {
 		mostra('Está acima do peso')
 	} else {
 		mostra('Está abaixo do peso')
+	}
 	
 </script>
